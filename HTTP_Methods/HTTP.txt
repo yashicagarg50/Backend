@@ -1,0 +1,10 @@
+HTTP METHODS:
+request and response cycle follows protocols called HTTP protocols
+
+HTTP PROTOCOLS:
+1) GET : to get data
+2) POST : to send data
+3) PATCH : to update data
+4) DELETE : to delete data 
+
+POSTMAN : To display the requests sent via HTTP. We also get to know all the requests we have send. we don't need frontend for this only the backend.
