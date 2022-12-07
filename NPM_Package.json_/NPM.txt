@@ -1,0 +1,5 @@
+NPM - Node Package Manager
+NPM is an open source community and we get third party packages.
+NPM can be installed globally and locally 
+globally : for full computer
+locally : only for the code 

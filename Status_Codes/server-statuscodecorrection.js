@@ -44,7 +44,7 @@ const server=http.createServer((req,res)=>{
 
   //---------------------CHANGES------------------------//
 
-    let path='./Status_Codes/views';
+    let path='./views';
     switch(req.url){
         case'/':
             path+='/index.html'
