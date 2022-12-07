@@ -1,0 +1,9 @@
+Benefits of Express:
+1) syntax simple
+2) Read / Write simple
+3) Updation simple
+4) response and request and routing all so simpler than node
+5) secure more
+6) server style logic**
+
+This works in order from top to bottom. If we do not encounter any favourable case then in the end we give a general case i.e. 404 page  
