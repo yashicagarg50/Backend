@@ -1,0 +1,30 @@
+We know from browser clients make a request due to which some processing is done in server and sends the response.
+
+The conclusion which is given to us has some status whether that was successful
+
+With every status some code is linked
+
+For e.g. A sentence: "I drank water today" is linked with 205. If I call 205 or the sentence it means the same.
+
+So if we call 205 we get the response with which HTTP header is linked which includes status code.
+
+Status Code is helpful when we want to know what all happened in the backend or in the server that we received this and this response.
+
+For e.g. We get 350 as status code in HTTP header. Then we will look up for this status code i.e. 350 that what it means or what code was it linked with.
+
+Basically we will debug.
+
+Status code is a short message from the server to the client which tells us what has happened behind the scene an is linked with some code
+
+Status code is not shown on the site. If we are using chrome--> developer tools--> networks tab--> status code
+
+we have 500 types of status codes which are subgrouped in 5 different categories:
+1) 100-199 : informational purposes
+2) 200-299 : success
+3) 300-399 : redirect
+4) 400-499 : client-side error 
+5) 500-599 : server error e.g. crash/down
+
+CUSTOM MADE STATUSCODES : above 600 (not a good habit)
+
+status codes helps in Search Engine Optimization (SEO) in increasing ranking.
