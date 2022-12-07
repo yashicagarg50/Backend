@@ -8,3 +8,28 @@ HTTP PROTOCOLS:
 4) DELETE : to delete data 
 
 POSTMAN : To display the requests sent via HTTP. We also get to know all the requests we have send. we don't need frontend for this only the backend.
+--------------------------------
+API
+--------------------------------
+Application Programmable Interface(API)
+--------------------------------
+
+REST API : If APIs follow rules then are called REST APIs
+(Representational State Transfer)
+
+Rules:
+1) Response should be same , irrespective of request platform 
+
+2) Routes should be named on the basis of nouns
+
+3) HTTP methods should be used for doing operations on these routes
+(app.get app.post app.patch app.delete)
+
+4) always in JSON format
+
+5) APIs should be stateless (after getting requests and responses then it doesnt recognises it second time if same request is sent. state is not stored. one time thing)
+
+If REST APIs are used: 
+1) 95% websites supports rest APIs
+2) community support is provided
+

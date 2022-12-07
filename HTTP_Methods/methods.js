@@ -41,3 +41,10 @@ app.listen(3000);
         message:"data has been deleted"
     });
  });
+
+ //params
+ app.get('/user/:id',(req,res)=>{
+
+    res.send("user id is ,req.params");
+    console.log(req.params.id);
+ })

@@ -1,0 +1,11 @@
+/user/yashica/annie/vriii
+
+will i make routes for every different user??
+This is very impractical 
+
+Thus an id is given to any user.
+Parameters :fetches as it is data in datbases
+
+Queries : data filtering 
+for using queries we use question mark 
+user/?iphone13/23421012
