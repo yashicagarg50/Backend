@@ -30,3 +30,5 @@ CUSTOM MADE STATUSCODES : above 600 (not a good habit)
 status codes helps in Search Engine Optimization (SEO) in increasing ranking.
 
 Abhi what's happening is when u go to inspect and check the status code of your 404 page u will find it to be 200 and successful, which is damned coz , it should show 404 . To correct this we have to make changes in the server.js file.
+
+REDIRECTING : To redirect from a page to a different page. Say earlier i used about to go to about page but now in url router is changed to about-me so i have to make it in this way that even with using about as router it should redirect to about me page.

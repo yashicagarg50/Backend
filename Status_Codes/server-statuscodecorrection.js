@@ -44,17 +44,22 @@ const server=http.createServer((req,res)=>{
 
   //---------------------CHANGES------------------------//
 
-    let path='./views';
+    let path='./Status_Codes/views';
     switch(req.url){
         case'/':
             path+='/index.html'
             res.statusCode=200;
             break;
-        case '/about.html':
+        case '/About.html':
             path+='/About.html'
             res.statusCode=200;
             break;
-            default:
+        case '/About-me.html':
+            res.statusCode=301;
+            res.setHeader('Location','/About.html');
+            res.end();
+            break;
+        default:
             path+='/404.html'
             res.statusCode=404;
             break;

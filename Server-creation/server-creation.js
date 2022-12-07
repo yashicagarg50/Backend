@@ -47,10 +47,10 @@ const server=http.createServer((req,res)=>{
         case'/':
             path+='/index.html'
             break;
-        case '/about.html':
+        case '/About.html':
             path+='/About.html'
             break;
-            default:
+        default:
             path+='/404.html'
             break;
     };
