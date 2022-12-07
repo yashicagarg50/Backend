@@ -42,12 +42,12 @@ const server=http.createServer((req,res)=>{
 //     //On doing this when we check on inspect and check the network tab then we can find all the requests made and its' deets that includes the date it was sent or was it successful or not? We can check request header as well as response header.Our requestMethod is : GET
 // });
     
-    let path='./views';
+    let path='./server-creation/views';
     switch(req.url){
         case'/':
             path+='/index.html'
             break;
-        case '/About.html':
+        case '/about.html':
             path+='/About.html'
             break;
         default:

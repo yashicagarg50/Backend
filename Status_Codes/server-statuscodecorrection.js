@@ -50,13 +50,13 @@ const server=http.createServer((req,res)=>{
             path+='/index.html'
             res.statusCode=200;
             break;
-        case '/About.html':
+        case '/about.html':
             path+='/About.html'
             res.statusCode=200;
             break;
         case '/About-me.html':
             res.statusCode=301;
-            res.setHeader('Location','/About.html');
+            res.setHeader('Location','/about.html');
             res.end();
             break;
         default:
