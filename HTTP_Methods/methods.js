@@ -6,41 +6,68 @@ app.use(express.json());
 app.listen(3000);
 
 //get
- let users={};
+ let users=[
+   {
+      id: 1,
+      name: "Yashica",
+   },
+   {
+      id: 2,
+      name: "Vrinda",
+   },
+   {
+      id: 3,
+      name: "Annie",
+   },
+];
+//mini app
+const userRouter=express.Router();
+app.use('/user',userRouter);
 
- app.get('/users',(req,res)=>{
-    res.send(users);
- })
+userRouter
+.route('/')
+.get(getUser)
+.post(postUser)
+.update(updateUser)
+.delete(deleteUser);
 
- app.post('/users',(req,res)=>{
-    console.log(req.body);
-    res.json({
-        message:"data received successfully",
-        users:req.body
-    });
- });
+userRouter
+.route('/:id')
+.get(getUserById);
+
+//  app.get('/users',(req,res)=>{
+//     res.send(users);
+//  })
+
+//  app.post('/users',(req,res)=>{
+//     console.log(req.body);
+//     res.json({
+//         message:"data received successfully",
+//         users:req.body
+//     });
+//  });
 
  //update ==> patch
- app.patch('/users',(req,res)=>{
-    console.log('req.body-> ',req.body);
-    //update data in users obj
-    let dataToBeUpdated=req.body;
-    for(key in dataToBeUpdated)
-    {
-        user[key]=dataToBeUpdated[key];
-    }
-    res.json({
-        message:"data updated successfully"
-    });
- });
+//  app.patch('/users',(req,res)=>{
+//     console.log('req.body-> ',req.body);
+//     //update data in users obj
+//     let dataToBeUpdated=req.body;
+//     for(key in dataToBeUpdated)
+//     {
+//         user[key]=dataToBeUpdated[key];
+//     }
+//     res.json({
+//         message:"data updated successfully"
+//     });
+//  });
 
- //to delete a data
- app.delete('/user',(req,res)=>{
-    users={};
-    res.json({
-        message:"data has been deleted"
-    });
- });
+//  //to delete a data
+//  app.delete('/user',(req,res)=>{
+//     users={};
+//     res.json({
+//         message:"data has been deleted"
+//     });
+//  });
 
  //params
  app.get('/user/:id',(req,res)=>{
@@ -48,3 +75,51 @@ app.listen(3000);
     res.send("user id is ,req.params");
     console.log(req.params.id);
  })
+
+getUser((req,res)=>{
+   res.send(users);
+});
+
+postUser((req,res)=>{
+   console.log(req.body);
+   users=req.body;
+   res.json({
+      message:"data received successfully",
+      user:req.body
+   });
+});
+
+updateUser((req,res)=>{
+   console.log('req.body-> ',req.body);
+
+   let dataToBeUpdated=req.body;
+   for(key in dataToBeUpdated){
+users[key]=dataToBeUpdated[key];
+   }
+   res.json({
+      message:"data updated successfully"
+   });      
+});
+
+deleteUser((req,res)=>{
+   users={};
+   res.json({
+      message:"data has been deleted"
+   });
+});
+
+getUserById((req,res)=>{
+   console.log(req.params.id);
+   let paramId=req.params.id;
+   let obj={};
+   for(let i=0;i<users,length;i++)
+   {
+      if(users[i]['id']==paramId){
+         obj=users[i];
+      }
+   }
+   res.json({
+      message:"req received",
+      data:obj
+   });
+});

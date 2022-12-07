@@ -7,3 +7,8 @@ Benefits of Express:
 6) server style logic**
 
 This works in order from top to bottom. If we do not encounter any favourable case then in the end we give a general case i.e. 404 page  
+
+----------------------------------
+       MOUNTING IN EXPRESS
+----------------------------------
+When we make a big project that includes a lot of routes so we try to segregate diff routes. like /users, /plans,/authorization. these are kinda mini application which we integrate to form a bigger application.
