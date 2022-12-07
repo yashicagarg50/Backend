@@ -1,4 +1,4 @@
-const express=require("express");
+const express=require('express');
 
 const app=express();
 //middleware func-->json
@@ -22,18 +22,16 @@ app.listen(3000);
 ];
 //mini app
 const userRouter=express.Router();
-app.use('/user',userRouter);
+app.use("/user",userRouter);
 
 userRouter
-.route('/')
+.route("/")
 .get(getUser)
 .post(postUser)
-.update(updateUser)
+.patch(updateUser)
 .delete(deleteUser);
 
-userRouter
-.route('/:id')
-.get(getUserById);
+userRouter.route("/:id").get(getUserById);
 
 //  app.get('/users',(req,res)=>{
 //     res.send(users);
@@ -70,26 +68,26 @@ userRouter
 //  });
 
  //params
- app.get('/user/:id',(req,res)=>{
+//  app.get('/user/:id',(req,res)=>{
 
-    res.send("user id is ,req.params");
-    console.log(req.params.id);
- })
+//     res.send("user id is ,req.params");
+//     console.log(req.params.id);
+//  })
 
-getUser((req,res)=>{
+function getUser(req,res) {
    res.send(users);
-});
+};
 
-postUser((req,res)=>{
+function postUser(req,res) {
    console.log(req.body);
    users=req.body;
    res.json({
       message:"data received successfully",
       user:req.body
    });
-});
+};
 
-updateUser((req,res)=>{
+function updateUser(req,res) {
    console.log('req.body-> ',req.body);
 
    let dataToBeUpdated=req.body;
@@ -99,20 +97,20 @@ users[key]=dataToBeUpdated[key];
    res.json({
       message:"data updated successfully"
    });      
-});
+};
 
-deleteUser((req,res)=>{
+function deleteUser(req,res) {
    users={};
    res.json({
       message:"data has been deleted"
    });
-});
+};
 
-getUserById((req,res)=>{
+function getUserById(req,res) {
    console.log(req.params.id);
    let paramId=req.params.id;
    let obj={};
-   for(let i=0;i<users,length;i++)
+   for(let i=0;i<users.length;i++)
    {
       if(users[i]['id']==paramId){
          obj=users[i];
@@ -122,4 +120,4 @@ getUserById((req,res)=>{
       message:"req received",
       data:obj
    });
-});
+};
