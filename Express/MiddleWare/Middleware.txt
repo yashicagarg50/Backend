@@ -1,0 +1,21 @@
+This is included in express only.
+This process is used between sending the requests and receiving the responses.
+
+Types of middlewares:
+1) app.use(_______) -> Global middleware function
+2) app.get(_______) -> Specific path middle ware function
+
+Benefits of middleware:
+1) Error handling
+2) Returning 404 pages
+3) Logger function
+4) For converting/to pass json into java script obj : app.use(express.json())
+
+How to use them?
+We write function which has 2 parameters(req,res) but in missleware functions we have 3 parameters 
+(req,res,next){
+-----process
+next(); //so that next middleware function is called
+}
+
+In error handling, we have 4 parameters(req,res,next,--) using which we can handle errors easily
