@@ -1,0 +1,11 @@
+MongoDB is a noSQL(not only SQL) database.
+
+1) robust
+2) scalable
+3) load balancing
+4) flexible
+5) sharding
+
+DRAWBACKS:
+1) complex transactions
+2) do not support JOINS also (read and write joins)
